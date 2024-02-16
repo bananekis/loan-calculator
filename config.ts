@@ -1,5 +1,7 @@
 import { LoanOptions } from './types';
 
+export const baseUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000';
+
 export const apiUrl = '/api';
 
 export const MINIMUM_AMOUNT = 5000; // Default amount: $5000

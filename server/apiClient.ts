@@ -1,4 +1,4 @@
-import { INITIAL_AMOUNT, INITIAL_TERM_MONTHS, apiUrl } from '@/config';
+import { INITIAL_AMOUNT, INITIAL_TERM_MONTHS, apiUrl, baseUrl } from '@/config';
 import { LoanDetails, LoanOptions } from '@/types';
 import { ZodIssue } from 'zod';
 import ky from 'ky';
@@ -12,7 +12,7 @@ export async function fetchLoanDetails(
 ): Promise<LoanDetails> {
   try {
     const response = await ky
-      .post(process.env.URL + apiUrl, { json: options })
+      .post(baseUrl + apiUrl, { json: options })
       .json<LoanDetails | { errors: ZodIssue[] }>();
 
     if ('errors' in response) {
