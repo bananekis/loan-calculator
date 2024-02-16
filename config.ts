@@ -1,6 +1,6 @@
 import { LoanOptions } from './types';
 
-export const baseUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000';
+export const baseUrl = process.env.NEXT_PUBLIC_API_URL || undefined;
 
 export const apiUrl = '/api';
 
