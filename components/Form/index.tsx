@@ -65,7 +65,6 @@ const LoanForm: FC = () => {
           textAlign='center'
           width='100%'
           isDisabled={isLoading || isSubmitting}
-          onClick={() => alert('Ahoj slunicko :))')}
         >
           Continue
         </Button>
